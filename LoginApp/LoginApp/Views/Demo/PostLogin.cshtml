@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "PostLogin";
+}
+
+
+<h2>@TempData["userId"]</h2>
+<h2>@TempData["successMsg"]</h2>
+<h2>@TempData["LoginMsg"]</h2>
+<h2>@TempData["PostLogin"]</h2>
+@{
+    TempData.Remove("userId");
+    TempData.Remove("successMsg");
+    TempData.Remove("LoginMsg");
+    TempData.Remove("PostLogin");
+    Session.Remove("Login");
+}
+  
+
